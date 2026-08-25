@@ -1,0 +1,15 @@
+{
+  "version": "1.1",
+  "description": "BMS Telemetry Export Manifest — expected raw data row counts per source file. A 'raw data row' is every non-blank, non-header line. Use verify_export.py to assert parser output matches these totals.",
+  "site_id": "kmssh-nas",
+  "cadence_minutes": 1,
+  "files": {
+    "component_fixture.csv": 12,
+    "sample_export.csv": null
+  },
+  "_notes": {
+    "null_count": "null means the file is listed for existence-checking only — any non-zero parse is a PASS.",
+    "real_files": "When the actual 12x component_*.csv and 12x device_*.csv exports are placed in /data, add each filename and its expected row count (total non-blank, non-header lines across all blocks in the file) to this dict.",
+    "example": "\"component_chillers.csv\": 14400"
+  }
+}

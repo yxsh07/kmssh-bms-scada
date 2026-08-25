@@ -1,0 +1,12 @@
+# Python dependencies for BMS data pipeline
+# Install: pip install -r data/requirements.txt
+
+# --- Core parser (always needed) ---
+# No third-party deps required for SQLite output path.
+
+# --- Parquet output (recommended) ---
+pyarrow>=14.0.0          # columnar storage + Parquet read/write
+pandas>=2.0.0            # DataFrame utilities (used by CsvDriver in backend)
+
+# --- Development / testing ---
+pytest>=8.0.0            # test runner
